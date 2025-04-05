@@ -1,0 +1,10 @@
+---
+- name: Deploy Artifact to localhost
+  hosts: localhost
+  connection: local
+  tasks:
+    - name: Copy the artifact to the target location
+      copy:
+        src: "/var/lib/jenkins/workspace/mavenwithAnsible/target/my-newapp-1.0-SNAPSHOT.jar"
+        dest: "/home/kbh18/anyname.jar"
+
